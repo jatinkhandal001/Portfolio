@@ -18,7 +18,7 @@ const Certificates: React.FC = () => {
     {
       id: 2,
       title: 'Google Cloud Study Jam Program',
-      issuer: 'Google',
+      issuer: 'Google Cloud',
       date: '2024',
       link: 'https://www.linkedin.com/posts/jatinkhandal001_ai-cloudcomputing-gdsc-activity-7121384437715546112-1qi6',
       description:
@@ -39,6 +39,22 @@ const Certificates: React.FC = () => {
       date: '2025',
       link: 'https://drive.google.com/file/d/1vd0chC9MnbT9PlIE6fLaS6bHKtQroX4I/view',
       description: 'Advanced web development skills and best practices',
+    },
+    {
+      id: 5,
+      title: 'AI - Machine Learning Engineer Foundation Course',
+      issuer: 'Reliance Foundation',
+      date: '2025',
+      link: 'https://drive.google.com/file/d/1vZJOskI7iFusvBLCgmwXN8kogdYnzDTf/view',
+      description: 'AI /ML Course certification',
+    },
+    {
+      id: 6,
+      title: 'Employment Communication A Lab based course',
+      issuer: 'NPTEL',
+      date: '2025',
+      link: 'https://drive.google.com/file/d/1vhCRwtoSebSMeUlFJMIcIxj3qcDsPbGl/view',
+      description: 'Credit Courses',
     },
   ];
 
