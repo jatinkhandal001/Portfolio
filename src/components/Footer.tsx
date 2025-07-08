@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
           <p className={`text-sm ${
             theme === 'dark' ? 'text-gray-400' : 'text-gray-500'
           }`}>
-            © 2024 All rights reserved. | Visitors: {visitorCount.toLocaleString()}
+            © 2025 All rights reserved. | Visitors: {visitorCount.toLocaleString()}
           </p>
         </div>
       </div>
