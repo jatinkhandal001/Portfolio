@@ -26,8 +26,11 @@ const Experience: React.FC = () => {
         'Learned best practices for scalable AI deployment on cloud platforms'
       ],
       technologies: ['Azure ML Studio', 'Python', 'Scikit-learn', 'Pandas','API Integration' , 'Azure Cognitive Services'],
-      link: 'https://drive.google.com/file/d/1lUcFJkcWGixEh-j84WJitrm5m1fLmVcK/view?usp=drive_link' // Replace with actual certificate link
-    },
+      certificate: {
+        label: 'View Certificate',
+        url: 'https://drive.google.com/file/d/1lUcFJkcWGixEh-j84WJitrm5m1fLmVcK/view?usp=drive_link',
+        target: '_blank'
+      }},
     {
       id: 2,
       title: 'Machine Learning Intern ',
@@ -43,8 +46,12 @@ const Experience: React.FC = () => {
         'Collaborated in a team environment using Agile practices and Git'
       ],
       technologies: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'Machine Learning' ,'Web scraping' , 'Opencv','Cvzone', 'Git', 'Jupyter'],
-      link: '#' // Add a certificate or company reference link if available
-    }    
+     certificate: {
+            label: 'Under process',
+            url: '',
+            target: '_blank'
+          } // Add a certificate or company reference link if available
+            }    
   ];
 
   useEffect(() => {
