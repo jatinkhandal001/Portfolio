@@ -26,7 +26,7 @@ const Experience: React.FC = () => {
         'Learned best practices for scalable AI deployment on cloud platforms'
       ],
       technologies: ['Azure ML Studio', 'Python', 'Scikit-learn', 'Pandas','API Integration' , 'Azure Cognitive Services'],
-      certificate: {
+      link: {
         label: 'View Certificate',
         url: 'https://drive.google.com/file/d/1lUcFJkcWGixEh-j84WJitrm5m1fLmVcK/view?usp=drive_link',
         target: '_blank'
