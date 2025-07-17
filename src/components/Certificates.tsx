@@ -56,6 +56,22 @@ const Certificates: React.FC = () => {
       link: 'https://drive.google.com/file/d/1vhCRwtoSebSMeUlFJMIcIxj3qcDsPbGl/view',
       description: 'Credit Courses',
     },
+    {
+      id: 7,
+      title: 'AWS Summit – India Online',
+      issuer: 'Amazon Web Services (AWS)',
+      date: 'June 2025',
+      link: 'https://drive.google.com/file/d/1KZnWQH4WXxQkjbU9ck-DZ7FX0JNebcNc/view?usp=drive_link',
+      description: 'Certificate of Attendance',
+    },
+    {
+      id: 8,
+      title: 'AI & Machine Learning Internship',
+      issuer: 'Microsoft & Edunet Foundation',
+      date: '2025',
+      link: 'https://drive.google.com/file/d/1lUcFJkcWGixEh-j84WJitrm5m1fLmVcK/view?usp=drive_link',
+      description: 'Internship Completion Certificate',
+    },
   ];
 
   const nextSlide = () => {
