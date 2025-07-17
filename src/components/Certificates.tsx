@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
-import { ChevronLeft, ChevronRight, Award } from 'lucide-react';
+import React from 'react';
+import { Award } from 'lucide-react';
 import { useTheme } from '../contexts/ThemeContext';
 
 const Certificates: React.FC = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
   const { theme } = useTheme();
 
   const certificates = [
@@ -74,16 +73,6 @@ const Certificates: React.FC = () => {
     },
   ];
 
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % certificates.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentIndex(
-      (prev) => (prev - 1 + certificates.length) % certificates.length
-    );
-  };
-
   return (
     <section
       id="certificates"
@@ -113,122 +102,79 @@ const Certificates: React.FC = () => {
           </p>
         </div>
 
-        <div className="relative">
-          {/* Carousel */}
-          <div className="overflow-hidden">
-            <div
-              className="flex transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-            >
-              {certificates.map((cert) => (
-                <div key={cert.id} className="w-full flex-shrink-0 px-4">
-                  <div
-                    className={`max-w-2xl mx-auto p-8 rounded-2xl backdrop-blur-sm border transition-all duration-300 hover:transform hover:scale-105 ${
-                      theme === 'dark'
-                        ? 'bg-gray-900/50 border-gray-700'
-                        : 'bg-white/50 border-gray-200'
-                    }`}
-                  >
-                    <div className="flex items-center justify-center mb-6">
-                      <div
-                        className={`p-4 rounded-full ${
-                          theme === 'dark'
-                            ? 'bg-gradient-to-r from-cyan-500 to-purple-500'
-                            : 'bg-gradient-to-r from-purple-500 to-blue-500'
-                        }`}
-                      >
-                        <Award size={32} className="text-white" />
-                      </div>
-                    </div>
-
-                    <div className="text-center">
-                      <h3
-                        className={`text-2xl font-bold mb-2 ${
-                          theme === 'dark' ? 'text-white' : 'text-gray-900'
-                        }`}
-                      >
-                        {cert.title}
-                      </h3>
-                      <p
-                        className={`text-lg mb-2 ${
-                          theme === 'dark' ? 'text-cyan-400' : 'text-purple-600'
-                        }`}
-                      >
-                        {cert.issuer}
-                      </p>
-                      <p
-                        className={`text-sm mb-4 ${
-                          theme === 'dark' ? 'text-gray-400' : 'text-gray-500'
-                        }`}
-                      >
-                        {cert.date}
-                      </p>
-                      <p
-                        className={`text-base ${
-                          theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
-                        }`}
-                      >
-                        {cert.description}
-                      </p>
-
-                      <a
-                        href={cert.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`inline-block mt-6 px-6 py-2 rounded-lg font-semibold transition duration-300 ${
-                          theme === 'dark'
-                            ? 'bg-cyan-600 text-white hover:bg-cyan-700'
-                            : 'bg-purple-600 text-white hover:bg-purple-700'
-                        }`}
-                      >
-                        View Certificate
-                      </a>
+        {/* Floating Scrollable Certificates */}
+        <div className="overflow-x-auto">
+          <div
+            className="flex space-x-6 px-4 py-2"
+            style={{
+              scrollSnapType: 'x mandatory',
+              scrollBehavior: 'smooth',
+            }}
+          >
+            {certificates.map((cert) => (
+              <div
+                key={cert.id}
+                className={`min-w-[300px] max-w-sm flex-shrink-0 scroll-snap-align-start px-2 py-4 rounded-2xl backdrop-blur-sm border transition-all duration-300 hover:transform hover:scale-105 ${
+                  theme === 'dark'
+                    ? 'bg-gray-900/50 border-gray-700'
+                    : 'bg-white/50 border-gray-200'
+                }`}
+              >
+                <div className="w-full text-center">
+                  <div className="flex justify-center mb-4">
+                    <div
+                      className={`p-4 rounded-full ${
+                        theme === 'dark'
+                          ? 'bg-gradient-to-r from-cyan-500 to-purple-500'
+                          : 'bg-gradient-to-r from-purple-500 to-blue-500'
+                      }`}
+                    >
+                      <Award size={32} className="text-white" />
                     </div>
                   </div>
+
+                  <h3
+                    className={`text-2xl font-bold mb-2 ${
+                      theme === 'dark' ? 'text-white' : 'text-gray-900'
+                    }`}
+                  >
+                    {cert.title}
+                  </h3>
+                  <p
+                    className={`text-lg mb-1 ${
+                      theme === 'dark' ? 'text-cyan-400' : 'text-purple-600'
+                    }`}
+                  >
+                    {cert.issuer}
+                  </p>
+                  <p
+                    className={`text-sm mb-2 ${
+                      theme === 'dark' ? 'text-gray-400' : 'text-gray-500'
+                    }`}
+                  >
+                    {cert.date}
+                  </p>
+                  <p
+                    className={`text-base ${
+                      theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
+                    }`}
+                  >
+                    {cert.description}
+                  </p>
+                  <a
+                    href={cert.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`inline-block mt-4 px-6 py-2 rounded-lg font-semibold transition duration-300 ${
+                      theme === 'dark'
+                        ? 'bg-cyan-600 text-white hover:bg-cyan-700'
+                        : 'bg-purple-600 text-white hover:bg-purple-700'
+                    }`}
+                  >
+                    View Certificate
+                  </a>
                 </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Navigation Buttons */}
-          <button
-            onClick={prevSlide}
-            className={`absolute left-4 top-1/2 transform -translate-y-1/2 p-3 rounded-full transition-all duration-300 ${
-              theme === 'dark'
-                ? 'bg-gray-800 text-white hover:bg-gray-700'
-                : 'bg-white text-gray-600 hover:bg-gray-100'
-            }`}
-          >
-            <ChevronLeft size={24} />
-          </button>
-
-          <button
-            onClick={nextSlide}
-            className={`absolute right-4 top-1/2 transform -translate-y-1/2 p-3 rounded-full transition-all duration-300 ${
-              theme === 'dark'
-                ? 'bg-gray-800 text-white hover:bg-gray-700'
-                : 'bg-white text-gray-600 hover:bg-gray-100'
-            }`}
-          >
-            <ChevronRight size={24} />
-          </button>
-
-          {/* Indicators */}
-          <div className="flex justify-center mt-8 space-x-2">
-            {certificates.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                  index === currentIndex
-                    ? theme === 'dark'
-                      ? 'bg-cyan-400'
-                      : 'bg-purple-500'
-                    : theme === 'dark'
-                    ? 'bg-gray-600'
-                    : 'bg-gray-300'
-                }`}
-              />
+              </div>
             ))}
           </div>
         </div>
