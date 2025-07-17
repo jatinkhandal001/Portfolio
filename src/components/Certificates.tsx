@@ -87,7 +87,6 @@ const Certificates: React.FC = () => {
                 : 'text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600'
             }`}
             style={{ fontFamily: 'Orbitron, monospace' }}
-            data-aos="fade-up"
           >
             Certificates
           </h2>
@@ -95,88 +94,76 @@ const Certificates: React.FC = () => {
             className={`text-xl max-w-3xl mx-auto ${
               theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
             }`}
-            data-aos="fade-up"
-            data-aos-delay="200"
           >
             Professional certifications that validate my expertise
           </p>
         </div>
 
-        {/* Floating Scrollable Certificates */}
-        <div className="overflow-x-auto">
-          <div
-            className="flex space-x-6 px-4 py-2"
-            style={{
-              scrollSnapType: 'x mandatory',
-              scrollBehavior: 'smooth',
-            }}
-          >
-            {certificates.map((cert) => (
-              <div
-                key={cert.id}
-                className={`min-w-[300px] max-w-sm flex-shrink-0 scroll-snap-align-start px-2 py-4 rounded-2xl backdrop-blur-sm border transition-all duration-300 hover:transform hover:scale-105 ${
-                  theme === 'dark'
-                    ? 'bg-gray-900/50 border-gray-700'
-                    : 'bg-white/50 border-gray-200'
-                }`}
-              >
-                <div className="w-full text-center">
-                  <div className="flex justify-center mb-4">
-                    <div
-                      className={`p-4 rounded-full ${
-                        theme === 'dark'
-                          ? 'bg-gradient-to-r from-cyan-500 to-purple-500'
-                          : 'bg-gradient-to-r from-purple-500 to-blue-500'
-                      }`}
-                    >
-                      <Award size={32} className="text-white" />
-                    </div>
-                  </div>
-
-                  <h3
-                    className={`text-2xl font-bold mb-2 ${
-                      theme === 'dark' ? 'text-white' : 'text-gray-900'
-                    }`}
-                  >
-                    {cert.title}
-                  </h3>
-                  <p
-                    className={`text-lg mb-1 ${
-                      theme === 'dark' ? 'text-cyan-400' : 'text-purple-600'
-                    }`}
-                  >
-                    {cert.issuer}
-                  </p>
-                  <p
-                    className={`text-sm mb-2 ${
-                      theme === 'dark' ? 'text-gray-400' : 'text-gray-500'
-                    }`}
-                  >
-                    {cert.date}
-                  </p>
-                  <p
-                    className={`text-base ${
-                      theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
-                    }`}
-                  >
-                    {cert.description}
-                  </p>
-                  <a
-                    href={cert.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`inline-block mt-4 px-6 py-2 rounded-lg font-semibold transition duration-300 ${
-                      theme === 'dark'
-                        ? 'bg-cyan-600 text-white hover:bg-cyan-700'
-                        : 'bg-purple-600 text-white hover:bg-purple-700'
-                    }`}
-                  >
-                    View Certificate
-                  </a>
+        {/* Grid Layout Instead of Horizontal Scroll */}
+        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          {certificates.map((cert) => (
+            <div
+              key={cert.id}
+              className={`p-6 rounded-2xl border backdrop-blur-sm transition-all duration-300 hover:scale-[1.03] ${
+                theme === 'dark'
+                  ? 'bg-gray-900/50 border-gray-700'
+                  : 'bg-white/50 border-gray-200'
+              }`}
+            >
+              <div className="flex justify-center mb-4">
+                <div
+                  className={`p-4 rounded-full ${
+                    theme === 'dark'
+                      ? 'bg-gradient-to-r from-cyan-500 to-purple-500'
+                      : 'bg-gradient-to-r from-purple-500 to-blue-500'
+                  }`}
+                >
+                  <Award size={32} className="text-white" />
                 </div>
               </div>
-            ))}
-          </div>
+
+              <h3
+                className={`text-xl font-bold mb-2 text-center ${
+                  theme === 'dark' ? 'text-white' : 'text-gray-900'
+                }`}
+              >
+                {cert.title}
+              </h3>
+              <p
+                className={`text-md text-center ${
+                  theme === 'dark' ? 'text-cyan-400' : 'text-purple-600'
+                }`}
+              >
+                {cert.issuer}
+              </p>
+              <p
+                className={`text-sm text-center mb-2 ${
+                  theme === 'dark' ? 'text-gray-400' : 'text-gray-500'
+                }`}
+              >
+                {cert.date}
+              </p>
+              <p
+                className={`text-sm text-center mb-4 ${
+                  theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
+                }`}
+              >
+                {cert.description}
+              </p>
+              <a
+                href={cert.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`block w-full text-center mt-2 px-4 py-2 rounded-lg font-semibold transition duration-300 ${
+                  theme === 'dark'
+                    ? 'bg-cyan-600 text-white hover:bg-cyan-700'
+                    : 'bg-purple-600 text-white hover:bg-purple-700'
+                }`}
+              >
+                View Certificate
+              </a>
+            </div>
+          ))}
         </div>
       </div>
     </section>
