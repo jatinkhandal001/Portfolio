@@ -74,7 +74,7 @@ const Header: React.FC = () => {
 
             {/* Download Resume Button */}
             <a
-              href="https://docs.google.com/document/d/1NtpXVOfE7WgeqBKKcmO5kbBm_vb6Z_Nr/edit?usp=drivesdk&ouid=102820377739370740071&rtpof=true&sd=true" // Make sure resume.pdf is in public folder
+              href="https://docs.google.com/document/d/1NKIpyGTB-NqRU8r4t0MF8Q2oeOCIPK-Z/edit?usp=sharing&ouid=102820377739370740071&rtpof=true&sd=true" // Make sure resume.pdf is in public folder
               target="_blank"
               rel="noopener noreferrer"
               className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-5 rounded-lg transition"
