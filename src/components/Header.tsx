@@ -99,7 +99,7 @@ const Header: React.FC = () => {
 
             {/* Download Resume Button */}
             <a
-              href="https://docs.google.com/document/d/1NtpXVOfE7WgeqBKKcmO5kbBm_vb6Z_Nr/edit?usp=drivesdk&ouid=102820377739370740071&rtpof=true&sd=true"
+              href="https://drive.google.com/file/d/1ki0uptx1kpcHpty4_f09w3NHunpk2wTr/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-5 rounded-lg transition"
