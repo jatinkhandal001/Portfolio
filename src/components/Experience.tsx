@@ -12,43 +12,40 @@ const Experience: React.FC = () => {
 
   const experiences = [
     {
-      id: 0,
-      title: 'AI & Machine Learning Intern',
-      company: 'Microsoft & Edunet Foundation',
-      location: 'Remote',
-      duration: '13 May to 13 June 2025',
-      type: 'Internship',
-      description: 'Completed a virtual internship focused on real-world AI and machine learning applications using Microsoft Azure tools and services. Collaborated with mentors to build scalable cloud-based ML solutions.',
-      achievements: [
-        'Built and deployed ML models using Azure Machine Learning Studio',
-        'Worked with Azure Cognitive Services for image and text analysis',
-        'Completed hands-on projects involving classification and prediction tasks',
-        'Learned best practices for scalable AI deployment on cloud platforms'
-      ],
-      technologies: ['Azure ML Studio', 'Python', 'Scikit-learn', 'Pandas','API Integration' , 'Azure Cognitive Services'],
-      link:"https://drive.google.com/file/d/1lUcFJkcWGixEh-j84WJitrm5m1fLmVcK/view?usp=sharing"
-        },
-    {
-      id: 2,
-      title: 'Machine Learning Intern ',
+      id: 1,
+      title: 'Machine Learning / AI Intern',
       company: 'LinuxWorld Informatics Pvt. Ltd.',
       location: 'Jaipur, India',
-      duration: 'May 2025 - Present',
+      duration: 'May 2025 - Aug 2025',
       type: 'Internship',
-      description: 'Working on real-world AI and machine learning projects under industry mentorship. Gaining hands-on experience with model development, deployment, and integration into scalable systems.',
+      description: 'Built and optimized machine learning models using Python and Scikit-learn on datasets with 10,000+ records. Developed end-to-end ML pipelines and computer vision solutions.',
       achievements: [
-        'Built ML models for classification, forecasting, and recommendation systems',
-        'Worked on real-time data preprocessing and feature engineering pipelines',
-        'Integrated trained models into web-based applications using Flask APIs',
-        'Collaborated in a team environment using Agile practices and Git'
+        'Built and optimized machine learning models using Python and Scikit-learn on datasets with 10,000+ records',
+        'Improved Random Forest classifier performance by increasing F1-score from 0.82 to 0.91 through hyperparameter tuning and feature selection',
+        'Designed end-to-end machine learning pipelines including data preprocessing, feature engineering, model training, and evaluation',
+        'Developed computer vision solutions using OpenCV for real-time face detection and recognition',
+        'Integrated ML and CV models into backend services using RESTful APIs'
       ],
-      technologies: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'Machine Learning' ,'Web scraping' , 'Opencv','Cvzone', 'Git', 'Jupyter'],
-     certificate: {
-            label: 'Under process',
-            url: '',
-            target: '_blank'
-          } // Add a certificate or company reference link if available
-            }    
+      technologies: ['Python', 'Scikit-learn', 'OpenCV', 'Pandas', 'NumPy', 'RESTful APIs', 'Machine Learning', 'Computer Vision'],
+      link: '#'
+    },
+    {
+      id: 2,
+      title: 'AI Azure Virtual Intern',
+      company: 'Microsoft & Edunet Foundation (AICTE)',
+      location: 'Virtual',
+      duration: 'May 2025 - Jun 2025',
+      type: 'Internship',
+      description: 'Completed virtual internship focused on AI and data analytics workloads on Microsoft Azure cloud services. Implemented intelligent vision workflows using Azure Cognitive Services.',
+      achievements: [
+        'Deployed AI and data analytics workloads on Microsoft Azure cloud services',
+        'Implemented intelligent vision workflows using Azure Cognitive Services',
+        'Gained hands-on experience with cloud-based AI deployment and scaling',
+        'Learned best practices for production-ready AI systems on Azure platform'
+      ],
+      technologies: ['Microsoft Azure', 'Azure Cognitive Services', 'AI Workloads', 'Data Analytics', 'Cloud Deployment'],
+      link: 'https://drive.google.com/file/d/1lUcFJkcWGixEh-j84WJitrm5m1fLmVcK/view?usp=drive_link'
+    }
   ];
 
   useEffect(() => {
@@ -381,10 +378,10 @@ const Experience: React.FC = () => {
         <div className="mt-16 text-center">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { label: 'Years Experience', value: '3+' },
-              { label: 'Projects Completed', value: '25+' },
+              { label: 'Years Experience', value: '1+' },
+              { label: 'Projects Completed', value: '5+' },
               { label: 'Technologies Mastered', value: '15+' },
-              { label: 'Happy Clients', value: '20+' }
+              { label: 'Happy Clients', value: '5+' }
             ].map((stat, index) => (
               <div
                 key={stat.label}
