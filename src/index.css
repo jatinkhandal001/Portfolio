@@ -11,17 +11,15 @@
 }
 
 html {
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
-  will-change: scroll-position;
+  scroll-behavior: auto;
 }
-
 
 body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
   background: #000;
+  scroll-behavior: auto;
 }
 
 /* Advanced scrollbar */
@@ -410,15 +408,43 @@ body {
 /* Performance optimizations */
 .will-change-transform {
   will-change: transform;
+  transform: translateZ(0);
 }
 
 .will-change-opacity {
   will-change: opacity;
+  transform: translateZ(0);
 }
 
 .gpu-accelerated {
   transform: translateZ(0);
   backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Smooth scrolling optimization */
+.smooth-scroll {
+  scroll-behavior: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Reduce motion for better performance */
+@media (prefers-reduced-motion: reduce) {
+  .floating-orb-large,
+  .floating-shape-medium,
+  .floating-particle,
+  .floating-line {
+    animation: none !important;
+    transform: none !important;
+  }
+}
+
+/* Optimize animations for 60fps */
+.optimized-animation {
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity;
+  transform: translateZ(0);
 }
 
 /* Accessibility improvements */
