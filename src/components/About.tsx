@@ -1,89 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jatin Khandal - AI/ML Developer & Data Science Student</title>
-    <meta
-      name="description"
-      content="Jatin Khandal is a B.Tech AI & Data Science student with practical internship experience in Machine Learning and Computer Vision development, specializing in AI/ML algorithms and cloud deployment."
-    />
-    <meta
-      name="keywords"
-      content="AI Developer, Machine Learning, Data Science, Computer Vision, Python, Azure, Google Cloud, OpenCV, Deep Learning"
-    />
-    <meta name="author" content="Jatin Khandal" />
+// src/components/About.tsx
+import React from "react";
 
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://jatinkhandal.dev/" />
-    <meta
-      property="og:title"
-      content="Jatin Khandal - AI/ML Developer & Data Science Student"
-    />
-    <meta
-      property="og:description"
-      content="B.Tech AI & Data Science student with practical experience in Machine Learning, Computer Vision, and cloud-based AI solutions"
-    />
-    <meta
-      property="og:image"
-      content="https://images.pexels.com/photos/2148222/pexels-photo-2148222.jpeg?auto=compress&cs=tinysrgb&w=1200"
-    />
+const About: React.FC = () => {
+  return (
+    <section className="about-section">
+      <h1 className="about-title">About Me</h1>
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://jatinkhandal.dev/" />
-    <meta
-      property="twitter:title"
-      content="Jatin Khandal - AI/ML Developer & Data Science Student"
-    />
-    <meta
-      property="twitter:description"
-      content="B.Tech AI & Data Science student with practical experience in Machine Learning, Computer Vision, and cloud-based AI solutions"
-    />
-    <meta
-      property="twitter:image"
-      content="https://images.pexels.com/photos/2148222/pexels-photo-2148222.jpeg?auto=compress&cs=tinysrgb&w=1200"
-    />
+      <p className="about-description">
+        Hi, I'm <strong>Jatin Khandal</strong>, a B.Tech student specializing in
+        <strong> Artificial Intelligence & Data Science</strong>.
+        I have hands-on experience in Machine Learning, Computer Vision,
+        and cloud-based AI solutions.
+      </p>
 
-    <!-- Preload fonts -->
-    <link
-      rel="preload"
-      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
+      <p>
+        My core interests include building real-world AI products,
+        deploying ML models, and solving impactful problems using data.
+      </p>
+    </section>
+  );
+};
 
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="manifest" href="/site.webmanifest" />
-
-    <!-- Theme color -->
-    <meta name="theme-color" content="#06b6d4" />
-
-    <!-- Structured data -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Jatin Khandal",
-        "jobTitle": "AI/ML Developer & Data Science Student",
-        "description": "B.Tech AI & Data Science student with practical internship experience in Machine Learning and Computer Vision",
-        "url": "https://jatinkhandal.dev",
-        "sameAs": [
-          "https://github.com/jatinkhandal001",
-          "https://linkedin.com/in/jatinkhandal001",
-          "https://twitter.com/jatinkhandal00",
-          "https://jatinkhandal.netlify.app/"
-        ]
-      }
-    </script>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+export default About;
