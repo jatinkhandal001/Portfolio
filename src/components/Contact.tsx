@@ -207,19 +207,19 @@ const Contact: React.FC = () => {
                 {
                   icon: <Mail size={24} />,
                   label: 'Email',
-                  value: 'khandaljatin2187@example.com',
+                  value: 'khandaljatin2187@gmail.com',
                   color: '#EA4335',
                 },
                 {
                   icon: <Phone size={24} />,
                   label: 'Phone',
-                  value: '+919664255659',
+                  value: '+91 9664255659',
                   color: '#34A853',
                 },
                 {
                   icon: <MapPin size={24} />,
                   label: 'Location',
-                  value: 'Jaipur , India',
+                  value: 'Jaipur, India',
                   color: '#4285F4',
                 },
               ].map((contact, index) => (
