@@ -13,87 +13,77 @@ const Projects: React.FC = () => {
     {
       id: 1,
       title: 'Startup Hub',
-      description:
-        'A smart platform for entrepreneurs to Search startups , Check Startup Growth , Startup Seo, Startup Tool Recommander , Startup Idea Validator, Ai Assistent for Startup , discover funding events — all powered by AI.',
+      description: 'AI-Powered Startup Intelligence Platform with data preprocessing, exploratory data analysis (EDA), and machine learning algorithms to analyze startup datasets.',
       image:
         'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=600',
       technologies: [
         'Python',
-        'MachineLearning',
         'Pandas',
-        'Gradio',
-        'Matplotlib',
-        'Web Scrapping',
+        'NumPy',
+        'Scikit-learn',
+        'Flask',
+        'REST APIs',
+        'Machine Learning'
       ],
       github:
         'https://github.com/jatinkhandal001/Startup_hub/tree/6c1292865357c2b872cdbd5836f25af0a5300be0/Startup_hub',
       live: 'https://startup-hub.onrender.com/',
       fullDescription:
-        'Startup Hub is an AI-driven platform that empowers entrepreneurs with intelligent tools to validate startup ideas, monitor growth, analyze SEO performance, and discover essential tools and funding opportunities. With built-in machine learning models and real-time data scraping, it delivers actionable insights and automates key startup research processes. Designed to be a one-stop destination for founders and early-stage innovators.',
+        'Applied data preprocessing, exploratory data analysis (EDA), and machine learning algorithms to analyze startup datasets. Built predictive models to generate insights for startup validation and growth analysis. Designed and deployed RESTful APIs for scalable analytics access.',
       features: [
-        'Startup Idea Validator using ML scoring',
-        'Real-time Startup Growth Analyzer',
-        'SEO Health Checker & Traffic Estimator',
-        'AI Assistant for Startup Guidance',
-        'Tool Recommender for productivity and growth',
-        'Startup Event and Funding Discovery Engine',
-        'Live web scraping and analytics dashboard',
-        'Modern, user-friendly interface built with Gradio',
+        'Data preprocessing and exploratory data analysis (EDA)',
+        'Machine learning algorithms for startup dataset analysis',
+        'Predictive models for startup validation and growth analysis',
+        'RESTful APIs for scalable analytics access',
+        'Insights generation for startup intelligence',
+        'End-to-end ML pipeline implementation'
       ],
-      stats: { stars: 234, forks: 45, commits: 892 },
+      stats: { stars: 234, forks: 45, commits: 892 }
     },
     {
       id: 2,
-      title: 'Virtual Mouse',
-      description:
-        'An AI-based Virtual Mouse using real-time hand gesture recognition powered by OpenCV and CVZone. Enables contactless cursor movement, click, and drag using hand gestures — enhancing accessibility and human-computer interaction.',
+      title: 'LearnFlow',
+      description: 'Adaptive AI Learning Platform using data-driven assessment and recommendation models with computer vision modules for face detection and recognition.',
       image:
-        'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=600',
-      technologies: ['Python', 'OpenCV', 'CVZone', 'MediaPipe'],
+        'https://images.pexels.com/photos/8369648/pexels-photo-8369648.jpeg?auto=compress&cs=tinysrgb&w=600',
+      technologies: ['Python', 'OpenCV', 'CvZone', 'Scikit-learn', 'Streamlit', 'REST APIs'],
       github:
-        'https://github.com/jatinkhandal001/Virtual-mouse/blob/f9a305831430e6b48ce24e741b005d12fc506ee5/virtual_mouse.py',
+        'https://github.com/jatinkhandal001',
+      live: '#',
       fullDescription:
-        'This project leverages computer vision to emulate mouse functions using hand gestures. It uses OpenCV for real-time image processing, MediaPipe for hand tracking, and CVZone for seamless gesture interpretation. It allows users to move the cursor, perform clicks, and drag items—all without touching the mouse. Ideal for accessibility use cases and touchless control environments.',
+        'Developing an adaptive AI-based learning system using data-driven assessment and recommendation models. Implemented analytics dashboards to monitor learner performance and engagement. Built computer vision modules for face detection and recognition.',
       features: [
-        'Real-time hand tracking using MediaPipe',
-        'Gesture-based mouse movement',
-        'Click and drag with custom hand signs',
-        'Contactless HCI (Human-Computer Interaction)',
-        'Runs on any webcam without special hardware',
-        'Accessible interface for people with motor disabilities',
+        'Adaptive AI-based learning system with data-driven models',
+        'Analytics dashboards for learner performance monitoring',
+        'Computer vision modules for face detection and recognition',
+        'Data-driven assessment and recommendation engine',
+        'Real-time engagement tracking and analysis',
+        'Streamlit-based user interface for easy interaction'
       ],
-      stats: { stars: 189, forks: 67, commits: 1205 },
+      stats: { stars: 156, forks: 23, commits: 567 }
     },
     {
       id: 3,
-      title: 'Carrierverse',
-      description:
-        'Learn coding and earn real-world rewards like coins, T-shirts, and swags on a gamified learning platform.',
+      title: 'Virtual Mouse',
+      description: 'AI-based Virtual Mouse using real-time hand gesture recognition powered by OpenCV and CVZone for contactless human-computer interaction.',
       image:
-        'https://images.pexels.com/photos/8369648/pexels-photo-8369648.jpeg?auto=compress&cs=tinysrgb&w=600',
-      technologies: [
-        'React',
-        'Python',
-        'HTML',
-        'CSS',
-        'JavaScript',
-        'Node.js',
-        'Express.js',
-        'MongoDB',
-        'Git',
-      ],
+        'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=600',
+      technologies: ['Python', 'OpenCV', 'CVZone', 'Computer Vision', 'Real-time Processing'],
+      github:
+        'https://github.com/jatinkhandal001/Virtual-mouse/blob/f9a305831430e6b48ce24e741b005d12fc506ee5/virtual_mouse.py',
+      live: '#',
       fullDescription:
-        'Carrierverse is a gamified coding education platform where learners complete programming challenges and earn exciting rewards like coins, T-shirts, and swags. The platform tracks progress, awards badges, and ranks users on a leaderboard to motivate consistent learning. Built with modern web technologies and optional blockchain components for transparency, Carrierverse turns learning into a rewarding experience.',
+        'AI-based Virtual Mouse using real-time hand gesture recognition powered by OpenCV and CVZone. Enables contactless cursor movement, click, and drag using hand gestures — enhancing accessibility and human-computer interaction.',
       features: [
-        'Gamified coding challenges with score-based rewards',
-        'Progress tracking and badge achievements',
-        'Leaderboard with top performers winning T-shirts & swags',
-        'Coin-based reward system for redeemable prizes',
-        'React-based responsive and interactive UI',
-        'Wallet/account system for tracking progress and rewards',
+        'Real-time hand gesture recognition using OpenCV',
+        'Contactless cursor movement and control',
+        'Click and drag functionality with hand gestures',
+        'Computer vision-based human-computer interaction',
+        'Accessibility enhancement for touchless control',
+        'Real-time video processing and gesture interpretation'
       ],
-      stats: { stars: 156, forks: 23, commits: 567 },
-    },
+      stats: { stars: 189, forks: 67, commits: 1205 }
+    }
   ];
 
   useEffect(() => {
