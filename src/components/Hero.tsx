@@ -182,7 +182,29 @@ const Hero: React.FC = () => {
   const scrollToAbout = () => {
     const aboutSection = document.querySelector('#about');
     if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth' });
+      const targetPosition = aboutSection.offsetTop - 80;
+      const startPosition = window.pageYOffset;
+      const distance = targetPosition - startPosition;
+      const duration = 1000;
+      let start: number | null = null;
+
+      const step = (timestamp: number) => {
+        if (!start) start = timestamp;
+        const progress = timestamp - start;
+        const percentage = Math.min(progress / duration, 1);
+        
+        const easeInOutCubic = (t: number) => 
+          t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+        
+        const currentPosition = startPosition + distance * easeInOutCubic(percentage);
+        window.scrollTo(0, currentPosition);
+        
+        if (progress < duration) {
+          requestAnimationFrame(step);
+        }
+      };
+      
+      requestAnimationFrame(step);
     }
   };
 
@@ -248,7 +270,7 @@ const Hero: React.FC = () => {
           }`}
           style={{ transformStyle: 'preserve-3d' }}
         >
-          AI/ML Developer & AI Enthusiast
+          B.Tech AI & Data Science Student | ML/AI Developer
         </p>
 
         <div className="hero-cta opacity-0 transform translate-y-8 scale-75">
