@@ -273,6 +273,15 @@ const FloatingOrbs: React.FC = () => {
 
     // Enhanced mouse interaction
     const handleMouseMove = (e: MouseEvent) => {
+      // Throttle mouse events for better performance
+      if (!container.dataset.canUpdate) {
+        container.dataset.canUpdate = 'true';
+        requestAnimationFrame(() => {
+          container.dataset.canUpdate = '';
+        });
+        return;
+      }
+      
       const { clientX, clientY } = e;
       const centerX = window.innerWidth / 2;
       const centerY = window.innerHeight / 2;
@@ -321,6 +330,15 @@ const FloatingOrbs: React.FC = () => {
 
     // Scroll-based animation
     const handleScroll = () => {
+      // Throttle scroll events
+      if (!container.dataset.canScroll) {
+        container.dataset.canScroll = 'true';
+        requestAnimationFrame(() => {
+          container.dataset.canScroll = '';
+        });
+        return;
+      }
+      
       const scrollY = window.scrollY;
       const scrollProgress = scrollY / (document.documentElement.scrollHeight - window.innerHeight);
       
