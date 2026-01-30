@@ -10,13 +10,14 @@ const Skills: React.FC = () => {
   const { theme } = useTheme();
 
   const skills = [
-    { name: 'PYTHON', level: 95, color: '#F7DF1E' },
-    { name: 'MACHINE LEARNING', level: 90, color: '#61DAFB' },
-    { name: 'C', level: 60, color: '#3178C6' },
-    { name: 'SQL', level: 60, color: '#339933' },
-    { name: 'GOOGLE CLOUD', level: 60, color: '#3776AB' },
-    { name: 'HTML/CSS', level: 80, color: '#3776AB' },
-    { name: 'WEB SCRAPING', level: 82, color: '#3776AB' },
+    { name: 'PYTHON', level: 95, color: '#3776AB' },
+    { name: 'MACHINE LEARNING', level: 90, color: '#FF6B6B' },
+    { name: 'COMPUTER VISION', level: 85, color: '#4ECDC4' },
+    { name: 'DATA ANALYTICS', level: 88, color: '#45B7D1' },
+    { name: 'DEEP LEARNING', level: 75, color: '#96CEB4' },
+    { name: 'CLOUD PLATFORMS', level: 80, color: '#FFEAA7' },
+    { name: 'SQL & R', level: 70, color: '#DDA0DD' },
+    { name: 'APIs & DEPLOYMENT', level: 85, color: '#98D8C8' },
   ];
 
   useEffect(() => {
