@@ -2,8 +2,7 @@
 import React from "react";
 
 const About: React.FC = () => {
-  return (
-    
+  return <section className="about-section"></section>;
 };
 
 export default About;
