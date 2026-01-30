@@ -99,13 +99,14 @@ const Header: React.FC = () => {
 
             {/* Download Resume Button */}
             <a
-              href="https://drive.google.com/file/d/1ki0uptx1kpcHpty4_f09w3NHunpk2wTr/view?usp=sharing"
+              href="https://drive.google.com/file/d/1PemC90lBBcCdrOfNH4M_QhiHYVVQJX52/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-5 rounded-lg transition"
             >
               Download Resume
-            </a>
+          </a>
+
           </div>
 
           {/* Theme Toggle & Mobile Menu Button */}
