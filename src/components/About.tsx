@@ -1,92 +1,89 @@
-import React from 'react';
-import { Code, Zap, Heart } from 'lucide-react';
-import { useTheme } from '../contexts/ThemeContext';
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jatin Khandal - AI/ML Developer & Data Science Student</title>
+    <meta
+      name="description"
+      content="Jatin Khandal is a B.Tech AI & Data Science student with practical internship experience in Machine Learning and Computer Vision development, specializing in AI/ML algorithms and cloud deployment."
+    />
+    <meta
+      name="keywords"
+      content="AI Developer, Machine Learning, Data Science, Computer Vision, Python, Azure, Google Cloud, OpenCV, Deep Learning"
+    />
+    <meta name="author" content="Jatin Khandal" />
 
-const About: React.FC = () => {
-  const { theme } = useTheme();
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://jatinkhandal.dev/" />
+    <meta
+      property="og:title"
+      content="Jatin Khandal - AI/ML Developer & Data Science Student"
+    />
+    <meta
+      property="og:description"
+      content="B.Tech AI & Data Science student with practical experience in Machine Learning, Computer Vision, and cloud-based AI solutions"
+    />
+    <meta
+      property="og:image"
+      content="https://images.pexels.com/photos/2148222/pexels-photo-2148222.jpeg?auto=compress&cs=tinysrgb&w=1200"
+    />
 
-  const cards = [
-    {
-      icon: <Code size={24} />,
-      title: 'Problem Solver',
-      description: 'I love tackling complex challenges and turning ideas into elegant solutions.'
-    },
-    {
-      icon: <Zap size={24} />,
-      title: 'Innovation Driven',
-      description: 'Always exploring cutting-edge technologies and pushing the boundaries of what\'s possible.'
-    },
-    {
-      icon: <Heart size={24} />,
-      title: 'Passionate Creator',
-      description: 'Building applications that make a difference and enhance user experiences.'
-    }
-  ];
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://jatinkhandal.dev/" />
+    <meta
+      property="twitter:title"
+      content="Jatin Khandal - AI/ML Developer & Data Science Student"
+    />
+    <meta
+      property="twitter:description"
+      content="B.Tech AI & Data Science student with practical experience in Machine Learning, Computer Vision, and cloud-based AI solutions"
+    />
+    <meta
+      property="twitter:image"
+      content="https://images.pexels.com/photos/2148222/pexels-photo-2148222.jpeg?auto=compress&cs=tinysrgb&w=1200"
+    />
 
-  return (
-    <section
-      id="about"
-      className={`py-20 ${theme === 'dark' ? 'bg-gray-900' : 'bg-white'}`}
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 
-            className={`text-4xl md:text-5xl font-bold mb-4 ${
-              theme === 'dark' 
-                ? 'text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-400'
-                : 'text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600'
-            }`}
-            style={{ fontFamily: 'Orbitron, monospace' }}
-            data-aos="fade-up"
-          >
-            About Me
-          </h2>
-          <p 
-            className={`text-xl max-w-3xl mx-auto ${
-              theme === 'dark' ? 'text-gray-300' : 'text-gray-600'
-            }`}
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            I'm a passionate developer with expertise in modern web technologies, 
-            AI/ML, and creating immersive digital experiences. I believe in writing 
-            clean, efficient code that makes a real impact.
-          </p>
-        </div>
+    <!-- Preload fonts -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {cards.map((card, index) => (
-            <div
-              key={index}
-              className={`p-8 rounded-2xl backdrop-blur-sm border transition-all duration-300 hover:transform hover:scale-105 ${
-                theme === 'dark'
-                  ? 'bg-gray-800/50 border-gray-700 hover:bg-gray-800/70'
-                  : 'bg-white/50 border-gray-200 hover:bg-white/70'
-              }`}
-              data-aos="fade-up"
-              data-aos-delay={index * 100}
-            >
-              <div className={`inline-flex p-3 rounded-lg mb-4 ${
-                theme === 'dark' 
-                  ? 'bg-gradient-to-r from-cyan-500 to-purple-500 text-white'
-                  : 'bg-gradient-to-r from-purple-500 to-blue-500 text-white'
-              }`}>
-                {card.icon}
-              </div>
-              <h3 className={`text-xl font-semibold mb-3 ${
-                theme === 'dark' ? 'text-white' : 'text-gray-900'
-              }`}>
-                {card.title}
-              </h3>
-              <p className={theme === 'dark' ? 'text-gray-300' : 'text-gray-600'}>
-                {card.description}
-              </p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 
-export default About;
+    <!-- Theme color -->
+    <meta name="theme-color" content="#06b6d4" />
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jatin Khandal",
+        "jobTitle": "AI/ML Developer & Data Science Student",
+        "description": "B.Tech AI & Data Science student with practical internship experience in Machine Learning and Computer Vision",
+        "url": "https://jatinkhandal.dev",
+        "sameAs": [
+          "https://github.com/jatinkhandal001",
+          "https://linkedin.com/in/jatinkhandal001",
+          "https://twitter.com/jatinkhandal00",
+          "https://jatinkhandal.netlify.app/"
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
